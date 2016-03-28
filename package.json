@@ -4,7 +4,7 @@
     "single-page": "^1.1.0"
   },
   "name": "route-event",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple client side route event",
   "main": "index.js",
   "directories": {
