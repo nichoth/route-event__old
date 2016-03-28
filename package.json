@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "catch-links": "^2.0.0",
+    "single-page": "^1.1.0"
+  },
+  "name": "route-event",
+  "version": "0.0.0",
+  "description": "Simple client side route event",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {
+    "routes": "^2.1.0",
+    "wzrd": "^1.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "wzrd example/index.js -- -dv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/route-event.git"
+  },
+  "keywords": [
+    "browser",
+    "client-side",
+    "client",
+    "route",
+    "event",
+    "router",
+    "single",
+    "page"
+  ],
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/route-event/issues"
+  },
+  "homepage": "https://github.com/nichoth/route-event#readme"
+}
