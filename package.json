@@ -30,7 +30,10 @@
     "event",
     "router",
     "single",
-    "page"
+    "page",
+    "location",
+    "url",
+    "change"
   ],
   "author": "Nick Thomas <nichoth@gmail.com>",
   "license": "ISC",
