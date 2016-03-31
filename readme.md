@@ -1,16 +1,18 @@
 # route event
 
-Simple route event for the browser. Take a function and call it with a path. Only triggers for links that are local to the server.
+Simple route event for the browser. Call a function with a path whenever someone clicks a link that is local to the server.
 
 ## example
 
-Listen for click events on `document.body` and pass the path:
+Listen for click events on `document.body`: 
 
 ```js
 var onRoute = require('route-event')
 
 onRoute(function(path) {
   console.log(path)
+  // '/example/path'
+  // (everything after the domain)
 })
 ```
 
