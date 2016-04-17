@@ -2,7 +2,9 @@ var url = require('url')
 var singlePage = require('single-page')
 var catchLinks = require('catch-links')
 
-module.exports = function(opts, onRoute) {
+module.exports = route
+
+function route(opts, onRoute) {
   if (typeof opts === 'function') {
     onRoute = opts
     opts = {}
@@ -15,4 +17,7 @@ module.exports = function(opts, onRoute) {
   })
 
   catchLinks(el, setRoute.bind(null))
+
+  return setRoute
 }
+

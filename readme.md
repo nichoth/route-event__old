@@ -7,26 +7,28 @@ Simple route event for the browser. Call a function with a path whenever someone
 Listen for click events on `document.body`: 
 
 ```js
-var onRoute = require('route-event')
+var route = require('route-event')
 
-onRoute(function(path) {
+var setRoute = route(function onChange(path) {
   console.log(path)
   // '/example/path'
-  // (everything after the domain)
 })
+
+// navigate somewhere and fire the onChange cb
+setRoute('/some/path')
 ```
 
 Pass in an element to listen to, and handle events with a router:
 
 ```js
-var onRoute = require('route-event')
+var route = require('route-event')
 var router = require('routes')()
 
 router.addRoute('/', function() {
   console.log('ham')
 })
 
-onRoute({ el: document.getElementById('app') }, function(path) {
+route({ el: document.getElementById('app') }, function onChange(path) {
   var m = router.match(path)
   m.fn()
 })
