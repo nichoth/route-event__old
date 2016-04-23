@@ -14,7 +14,7 @@ function route(opts, onRoute) {
   var setRoute = singlePage(function(href) {
     var path = url.parse(href).pathname
     onRoute(path)
-  })
+  }, opts)
 
   catchLinks(el, setRoute.bind(null))
 
