@@ -9,26 +9,29 @@ Listen for click events on `document.body`:
 ```js
 var route = require('route-event')
 
-var setRoute = route(function onChange(path) {
+// listen for click events on docuement.body. If the href is local to the
+// server, call `onRoute`
+var setRoute = route(onRoute)
+
+function onRoute (path) {
   console.log(path)
   // '/example/path'
-})
+}
 
-// navigate somewhere and fire the onChange cb
+// change the location and fire the onRoute cb
 setRoute('/some/path')
 ```
 
 Pass in an element to listen to, and handle events with a router:
-
 ```js
 var route = require('route-event')
 var router = require('routes')()
 
-router.addRoute('/', function() {
-  console.log('ham')
+router.addRoute('/', function () {
+  console.log('root')
 })
 
-route({ el: document.getElementById('app') }, function onChange(path) {
+route({ el: document.getElementById('app') }, function onChange (path) {
   var m = router.match(path)
   m.fn()
 })
