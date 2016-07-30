@@ -11,12 +11,12 @@ function route(opts, onRoute) {
   }
 
   var el = opts.el || document.body
-  var setRoute = singlePage(function(href) {
+  var setRoute = singlePage(function (href, scroll) {
     var path = url.parse(href).pathname
-    onRoute(path)
+    onRoute(path, scroll)
   }, opts)
 
-  catchLinks(el, setRoute.bind(null))
+  catchLinks(el, setRoute)
 
   return setRoute
 }

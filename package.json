@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "wzrd example/index.js -- -dv"
+    "dev": "wzrd example/index.js -- -dv",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",
