@@ -13,9 +13,11 @@ var route = require('route-event')
 // server, call `onRoute`
 var setRoute = route(onRoute)
 
-function onRoute (path) {
+function onRoute (path, scrollState) {
   console.log(path)
   // '/example/path'
+  console.log(scrollState)
+  // { scrollX: 0, scrollY: 0 }
 }
 
 // change the location and fire the onRoute cb
