@@ -11,7 +11,9 @@ function Route (opts) {
 
     var setRoute = singlePage(function (href, scroll) {
         var path = url.parse(href).pathname
-        listeners.forEach(path, scroll)
+        listeners.forEach(function (cb) {
+            cb(path, scroll)
+        })
     }, opts)
 
     catchLinks(el, setRoute)
