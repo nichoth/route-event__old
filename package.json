@@ -6,6 +6,12 @@
   "directories": {
     "example": "example"
   },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
+    "postversion": "git push && git push --tags && npm publish"
+  },
   "dependencies": {
     "catch-links": "^2.0.0",
     "single-page": "^1.1.0"
@@ -15,15 +21,7 @@
     "dependency-check": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-minlint": "^2.0.0",
-    "routes": "^2.1.0",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.8.0"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "wzrd example/index.js -- -dv",
-    "postversion": "git push && git push --tags && npm publish"
+    "routes": "^2.1.0"
   },
   "repository": {
     "type": "git",

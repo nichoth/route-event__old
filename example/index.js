@@ -1,12 +1,12 @@
-var onRoute = require('../')
+var onRoute = require('../')()
 var router = require('routes')()
 
 router.addRoute('/', function() {
-  console.log('root')
+    console.log('root')
 })
 
 router.addRoute('/foo', function () {
-    console.log('foo'
+    console.log('foo')
 })
 
 onRoute(function(path) {
