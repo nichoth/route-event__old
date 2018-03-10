@@ -1,4 +1,3 @@
-var url = require('url')
 var singlePage = require('single-page')
 var catchLinks = require('catch-links')
 
@@ -10,9 +9,8 @@ function Route (opts) {
     var el = opts.el || document.body
 
     var setRoute = singlePage(function (href, scroll) {
-        var path = url.parse(href).pathname
         listeners.forEach(function (cb) {
-            cb(path, scroll)
+            cb(href, scroll)
         })
     }, opts)
 
