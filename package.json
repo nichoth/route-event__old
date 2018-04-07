@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "catch-links": "^2.0.0",
-    "single-page": "^1.1.0"
+    "single-page": "https://github.com/nichoth/single-page/tarball/master"
   },
   "devDependencies": {
     "budo": "^10.0.4",
