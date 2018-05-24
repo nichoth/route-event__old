@@ -18,7 +18,7 @@ var stopListening = route(function onRoute (path, scrollState) {
   // { scrollX: 0, scrollY: 0 }
 })
 
-// change the location and fire the onRoute cb
+// change the location and call the onRoute cb
 route.setRoute('/some/path')
 ```
 
