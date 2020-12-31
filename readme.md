@@ -1,6 +1,11 @@
 # route event
-
 Simple route event for the browser. Call a function with a path whenever someone clicks a link that is local to the server.
+
+## install
+
+```
+npm i route-event
+```
 
 ## example
 
