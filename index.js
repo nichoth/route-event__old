@@ -1,8 +1,6 @@
 var singlePage = require('single-page')
 var catchLinks = require('catch-links')
 
-module.exports = Route
-
 function Route (opts) {
     opts = opts || {}
     var listeners = []
@@ -24,7 +22,16 @@ function Route (opts) {
         }
     }
 
+    listen.getRoute = getRoute
     listen.setRoute = setRoute
     return listen
 }
 
+Route.getRoute = getRoute
+
+// convenience
+function getRoute () {
+    return window.location.pathname
+}
+
+module.exports = Route
