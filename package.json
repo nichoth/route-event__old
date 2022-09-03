@@ -19,7 +19,7 @@
   "devDependencies": {
     "budo": "^11.8.4",
     "dependency-check": "^3.0.0",
-    "eslint": "^4.16.0",
+    "eslint": "^8.23.0",
     "eslint-config-minlint": "^2.0.0",
     "routes": "^2.1.0"
   },
