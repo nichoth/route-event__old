@@ -17,7 +17,7 @@
     "single-page": "https://github.com/nichoth/single-page/tarball/master"
   },
   "devDependencies": {
-    "budo": "^10.0.4",
+    "budo": "^11.8.4",
     "dependency-check": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-minlint": "^2.0.0",
