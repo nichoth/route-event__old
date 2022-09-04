@@ -1,4 +1,3 @@
-var onRoute = require('../')()
 var router = require('routes')()
 
 router.addRoute('/', function() {
@@ -9,9 +8,17 @@ router.addRoute('/foo', function () {
     console.log('foo')
 })
 
-onRoute(function(path) {
-    var m = router.match(path)
-    m.fn()
+navigation.addEventListener('navigate', ev => {
+    console.log('nav event', ev)
+    // ev.preventDefault()
+    console.log(ev.destination.url)
+    console.log('can intercept', ev.canIntercept)
+    const url = new URL(ev.destination.url)
+    console.log('url.pathname', url.pathname)
+    // ev.intercept({ handler: loadIndexPage })
+    ev.preventDefault()
 })
 
-
+function loadIndexPage () {
+    console.log('aaaaaaa')
+}
