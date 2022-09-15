@@ -43,3 +43,4 @@ route(function onChange (path) {
   m.fn()
 })
 ```
+
