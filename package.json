@@ -1,6 +1,6 @@
 {
   "name": "route-event",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "Simple client side route event",
   "main": "index.js",
   "directories": {
