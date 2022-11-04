@@ -13,7 +13,7 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "catch-links": "^2.0.0",
+    "@nichoth/catch-links": "^0.0.1",
     "single-page": "https://github.com/nichoth/single-page/tarball/master"
   },
   "devDependencies": {
