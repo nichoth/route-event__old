@@ -2,14 +2,26 @@
   "name": "route-event",
   "version": "3.2.4",
   "description": "Simple client side route event",
-  "main": "index.js",
+  "main": "src/index.js",
   "directories": {
     "example": "example"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./dist": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
+    "build": "node ./build.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
+    "preversion": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
@@ -19,6 +31,7 @@
   "devDependencies": {
     "budo": "^11.8.4",
     "dependency-check": "^3.0.0",
+    "esbuild": "^0.15.13",
     "eslint": "^8.23.0",
     "eslint-config-minlint": "^2.0.0",
     "routes": "^2.1.0"

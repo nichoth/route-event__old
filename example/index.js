@@ -1,4 +1,4 @@
-var onRoute = require('../')()
+var onRoute = require('../src')()
 var router = require('routes')()
 
 router.addRoute('/', function() {
