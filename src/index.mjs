@@ -1,5 +1,5 @@
 // @ts-check
-import singlePage from "@nichoth/single-page"
+import { singlePage } from "@nichoth/single-page"
 import CatchLinks from "@nichoth/catch-links"
 
 export default function Route (opts) {

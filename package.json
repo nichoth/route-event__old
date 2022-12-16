@@ -19,7 +19,7 @@
   "scripts": {
     "build": "rm -rf ./dist/* && node ./build.cjs && cp ./src/index.mjs ./dist/index.mjs",
     "lint": "eslint .",
-    "test": "npm run build && cd test && npm test",
+    "test": "npm run build && cd test && npm test && npm run test-cjs",
     "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
     "preversion": "npm run build",
     "prepublishOnly": "npm run build",
