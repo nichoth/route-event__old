@@ -3,6 +3,7 @@
         "route-event": "../"
     },
     "scripts": {
+        "test-cjs": "esbuild --bundle ./index.cjs | htmlify ./index.html | tape-run --input=html | tap-arc",
         "test": "esbuild --bundle ./index.mjs | htmlify ./index.html | tape-run --input=html | tap-arc"
     }
 }

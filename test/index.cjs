@@ -1,5 +1,5 @@
-import { test } from 'tapzero'
-import Route from '../dist/index.mjs'
+const { test } = require('tapzero')
+const Route = require('route-event').default
 
 test('catch route change', t => {
     Route()(function onRoute (href) {

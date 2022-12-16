@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "lib": ["es2021", "dom"],
+    "noEmit": true,
+    "strict": false,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "src/index.mjs"
+  ]
+}
