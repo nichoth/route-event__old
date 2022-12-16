@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "route-event": "../"
+    },
+    "scripts": {
+        "test": "esbuild --bundle ./index.mjs | htmlify ./index.html | tape-run --input=html | tap-arc"
+    }
+}

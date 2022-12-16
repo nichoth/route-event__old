@@ -17,9 +17,9 @@
     }
   },
   "scripts": {
-    "build": "node ./build.js",
+    "build": "rm -rf ./dist/* && node ./build.cjs && cp ./src/index.mjs ./dist/index.mjs",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd test && npm i && npm test",
     "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
     "preversion": "npm run build",
     "prepublishOnly": "npm run build",
@@ -32,10 +32,14 @@
   "devDependencies": {
     "budo": "^11.8.4",
     "dependency-check": "^3.0.0",
-    "esbuild": "^0.15.13",
+    "esbuild": "^0.15.18",
     "eslint": "^8.23.0",
     "eslint-config-minlint": "^2.0.0",
-    "routes": "^2.1.0"
+    "inline-htmlify": "^2.0.1",
+    "routes": "^2.1.0",
+    "tap-arc": "^0.3.5",
+    "tape-run": "^10.0.0",
+    "tapzero": "^0.6.1"
   },
   "repository": {
     "type": "git",
