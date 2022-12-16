@@ -12,7 +12,7 @@ async function main () {
         bundle: false,
         keepNames: true,
         format: 'cjs',
-        outfile: path.join('./dist/', 'index.js'),
+        outfile: path.join('./dist/', 'index.cjs'),
         platform: 'browser'
     })
 
@@ -22,7 +22,7 @@ async function main () {
         bundle: false,
         keepNames: true,
         format: 'esm',
-        outfile: path.join('./dist/', 'index.esm.js'),
+        outfile: path.join('./dist/', 'index.mjs'),
         platform: 'browser'
     })
 }

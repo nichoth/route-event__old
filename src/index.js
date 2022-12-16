@@ -1,5 +1,5 @@
 var singlePage = require('single-page')
-var catchLinks = require('@nichoth/catch-links/dist')
+var catchLinks = require('@nichoth/catch-links')
 
 function Route (opts) {
     opts = opts || {}

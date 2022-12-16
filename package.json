@@ -8,12 +8,12 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./dist": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
@@ -22,10 +22,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
     "preversion": "npm run build",
+    "prepublishOnly": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "@nichoth/catch-links": "^0.0.4",
+    "@nichoth/catch-links": "^0.0.9",
     "single-page": "https://github.com/nichoth/single-page/tarball/master"
   },
   "devDependencies": {
