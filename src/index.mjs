@@ -1,7 +1,8 @@
-var singlePage = require('single-page')
-var catchLinks = require('@nichoth/catch-links/dist')
+// @ts-check
+import { singlePage } from "@nichoth/single-page"
+import CatchLinks from "@nichoth/catch-links"
 
-function Route (opts) {
+export default function Route (opts) {
     opts = opts || {}
     var listeners = []
     var el = opts.el || document.body
@@ -12,7 +13,7 @@ function Route (opts) {
         })
     }, opts)
 
-    catchLinks(el, setRoute)
+    CatchLinks(el, setRoute)
 
     function listen (cb) {
         var i = listeners.length
@@ -22,16 +23,6 @@ function Route (opts) {
         }
     }
 
-    listen.getRoute = getRoute
     listen.setRoute = setRoute
     return listen
 }
-
-Route.getRoute = getRoute
-
-// convenience
-function getRoute () {
-    return window.location.pathname
-}
-
-module.exports = Route

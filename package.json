@@ -1,6 +1,6 @@
 {
   "name": "route-event",
-  "version": "4.0.1",
+  "version": "4.1.1",
   "description": "Simple client side route event",
   "main": "src/index.js",
   "directories": {
@@ -8,33 +8,38 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./dist": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "build": "node ./build.js",
+    "build": "rm -rf ./dist/* && node ./build.cjs && cp ./src/index.mjs ./dist/index.mjs",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build && cd test && npm test && npm run test-cjs",
     "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
     "preversion": "npm run build",
+    "prepublishOnly": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "@nichoth/catch-links": "^0.0.4",
-    "single-page": "https://github.com/nichoth/single-page/tarball/master"
+    "@nichoth/catch-links": "^0.0.11",
+    "@nichoth/single-page": "^1.4.0"
   },
   "devDependencies": {
     "budo": "^11.8.4",
     "dependency-check": "^3.0.0",
-    "esbuild": "^0.15.13",
+    "esbuild": "^0.15.18",
     "eslint": "^8.23.0",
     "eslint-config-minlint": "^2.0.0",
-    "routes": "^2.1.0"
+    "inline-htmlify": "^2.0.1",
+    "routes": "^2.1.0",
+    "tap-arc": "^0.3.5",
+    "tape-run": "^10.0.0",
+    "tapzero": "^0.6.1"
   },
   "repository": {
     "type": "git",

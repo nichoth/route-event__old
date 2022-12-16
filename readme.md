@@ -7,16 +7,25 @@ Simple route event for the browser. Call a function with a path whenever someone
 npm i route-event
 ```
 
-## example
+### CJS
+```js
+var Route = require('route-event')
+```
 
+### ESM
+```js
+import Route from 'route-event'
+```
+
+## example
 Listen for click events on `document.body`: 
 
 ```js
-var route = require('route-event')()
+var Route = require('route-event')
 
 // listen for click events on docuement.body. If the href is local to the
 // server, call `onRoute`
-var stopListening = route(function onRoute (path, scrollState) {
+var stopListening = Route()(function onRoute (path, scrollState) {
   console.log(path)
   // '/example/path'
   console.log(scrollState)
@@ -43,4 +52,3 @@ route(function onChange (path) {
   m.fn()
 })
 ```
-
