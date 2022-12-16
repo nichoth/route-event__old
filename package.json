@@ -23,7 +23,7 @@
     "start": "budo example/index.js:bundle.js --dir example --pushstate --live -- -dv",
     "preversion": "npm run build",
     "prepublishOnly": "npm run build",
-    "postversion": "git push && git push --tags && npm publish"
+    "postversion": "git push && git push --tags && npm publish && npm publish"
   },
   "dependencies": {
     "@nichoth/catch-links": "^0.0.11",
