@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@nichoth/catch-links": "^0.0.11",
-    "@nichoth/single-page": "^1.4.0"
+    "@nichoth/single-page": "^1.4.2"
   },
   "devDependencies": {
     "budo": "^11.8.4",
