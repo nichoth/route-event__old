@@ -21,11 +21,11 @@ import Route from 'route-event'
 Listen for click events on `document.body`: 
 
 ```js
-var Route = require('route-event')
+var route = require('route-event')()
 
 // listen for click events on docuement.body. If the href is local to the
 // server, call `onRoute`
-var stopListening = Route()(function onRoute (path, scrollState) {
+var stopListening = route(function onRoute (path, scrollState) {
   console.log(path)
   // '/example/path'
   console.log(scrollState)
