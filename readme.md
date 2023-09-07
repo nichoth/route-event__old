@@ -41,7 +41,7 @@ Pass in an element to listen to, and handle events with a router:
 var route = require('route-event')({
     el: document.getElementById('app')
 })
-var router = require('routes')()
+var router = require('@nichoth/routes')()
 
 router.addRoute('/', function () {
   console.log('root')
@@ -49,6 +49,6 @@ router.addRoute('/', function () {
 
 route(function onChange (path) {
   var m = router.match(path)
-  m.fn()
+  m.action()
 })
 ```
