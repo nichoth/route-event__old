@@ -1,4 +1,4 @@
-const { test } = require('tapzero')
+const { test } = require('@socketsupply/tapzero')
 const Route = require('route-event').default
 
 test('catch route change', t => {

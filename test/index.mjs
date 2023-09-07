@@ -1,4 +1,4 @@
-import { test } from 'tapzero'
+import { test } from '@socketsupply/tapzero'
 import Route from 'route-event'
 
 test('catch route change', t => {

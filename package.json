@@ -30,16 +30,16 @@
     "@nichoth/single-page": "^1.4.4"
   },
   "devDependencies": {
+    "@nichoth/routes": "^3.0.7",
+    "@socketsupply/tapzero": "^0.7.1",
     "budo": "^11.8.4",
     "dependency-check": "^3.0.0",
     "esbuild": "^0.15.18",
     "eslint": "^8.23.0",
     "eslint-config-minlint": "^2.0.0",
     "inline-htmlify": "^2.0.1",
-    "routes": "^2.1.0",
     "tap-arc": "^0.3.5",
-    "tape-run": "^10.0.0",
-    "tapzero": "^0.6.1"
+    "tape-run": "^10.0.0"
   },
   "repository": {
     "type": "git",

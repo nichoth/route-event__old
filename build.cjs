@@ -3,7 +3,7 @@ const path = require('path')
 const esbuild = require('esbuild')
 
 //
-// build CJS and ESM versions
+// build CJS version
 //
 async function main () {
     // cjs
